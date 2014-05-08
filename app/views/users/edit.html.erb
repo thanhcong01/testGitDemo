@@ -1,23 +1,23 @@
 <% provide(:title, "Edit user") %>
-<h1>Cap nhat thong tin ca nhan</h1>
+<h1>Update user's information</h1>
 
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
-      <p>Tên</p>
+      <p>User Name</p>
       <%= f.text_field :name, placeholder: "name" %>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
 
-      <p>Mật khẩu</p>
+      <p>Password</p>
       <%= f.password_field :password %>
 
-      <p>Xác nhận mật khẩu</p>
+      <p>Retype Password</p>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Thay doi", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Update", class: "btn btn-large btn-primary" %>
     <% end %>
 
     <%= gravatar_for @user %>
