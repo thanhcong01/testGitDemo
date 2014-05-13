@@ -2,7 +2,8 @@
 <%= gravatar_for user %>
 <%= link_to user.name, user %>
 
-TOTAL POSTS <%= user.microposts.count %> | Mail: <%= mail_to user.email %>
+TOTAL POSTS <%= user.microposts.count %> | Mail: <%= mail_to user.email %> | 
+<%= user.followed_users.count %> following | <%= user.followers.count %> followers
 
 <% if current_user.admin? && !current_user?(user) %>
   | <%= link_to "delete", user, method: :delete,
