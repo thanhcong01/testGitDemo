@@ -1,5 +1,4 @@
 <li>
-<%= gravatar_for user %>
 <%= link_to user.name, user %>
 
 TOTAL POSTS <%= user.microposts.count %> | Mail: <%= mail_to user.email %> | 
@@ -9,4 +8,4 @@ TOTAL POSTS <%= user.microposts.count %> | Mail: <%= mail_to user.email %> |
   | <%= link_to "delete", user, method: :delete,
                                               data: { confirm: "Are you sure?" } %>
                                             <% end %>
-                                            </li>
+</li>
