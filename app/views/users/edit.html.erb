@@ -1,20 +1,20 @@
 <% provide(:title, "Edit user") %>
-<h1>Cap nhat thong tin nguoi dung</h1>
+<h1>Update user informations</h1>
 
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
-      <p>Ten nguoi dung</p>
+      <p>Name</p>
       <%= f.text_field :name, placeholder: "name" %>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
 
-      <p>Mat khau</p>
+      <p>Password</p>
       <%= f.password_field :password %>
 
-      <p>Xac nhan mat khau</p>
+      <p>Password confirmation</p>
       <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Update", class: "btn btn-large btn-primary" %>
